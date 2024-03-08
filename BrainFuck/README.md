@@ -27,10 +27,10 @@ gcc -o bf_interpreter/bf_interpreter bf_interpreter/bf_interpreter.c
 ```
 Compile your.bf code
 ```Terminal
-gcc -o ./bf_interpreter/bf_interpreter nameOfYourFile.bf
+./bf_interpreter/bf_interpreter nameOfYourFile.bf
 ```
 Compile your.bf code
 (For example HelloWorld.bf)
 ```Terminal
-gcc -o ./bf_interpreter/bf_interpreter HelloWorld.bf
+./bf_interpreter/bf_interpreter HelloWorld.bf
 ```

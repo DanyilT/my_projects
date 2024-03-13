@@ -14,14 +14,37 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         boolean running = true;
 
+        String message = "Press button ENTER";
+            // ANSI color codes
+            String[] colors = {"\033[31m", // Red
+                               "\033[32m", // Green
+                               "\033[33m", // Yellow
+                               "\033[34m", // Blue
+                               "\033[35m", // Purple
+                               "\033[36m", // Cyan
+                               "\033[37m"}; // White
+
         while (running) {
-            System.out.println("---------------------------------------");
-            System.out.println("1. Make an order");
-            System.out.println("2. See/Modify the inventory file");
-            System.out.println("3. Exit");
-            System.out.print("Choose an option: ");
+            for (int i = 0; i < message.length(); i++) {
+                System.out.print(colors[i % colors.length] + message.charAt(i));
+            }
+            System.out.println("\033[0m"); // Reset to default color
+
+            scanner.nextLine();
+            scanner.nextLine();
+
+            System.out.println("\033[0;1m+---------------------------------------+");
+            System.out.println("|   ☕️  \033[0;34mWelcome to Our CoffeeShop\033[0;1m  ☕️   |");
+            System.out.println("|             \033[0;34mMain Menu\033[0;1m                 |");
+            System.out.println("+---------------------------------------+");
+            System.out.println("| 📝  \033[0m1. \033[0;32mMake an order\033[0;1m                  |");
+            System.out.println("| 🔐  \033[0m2. \033[0;32mSee/Modify the inventory file\033[0;1m  |");
+            System.out.println("|                  \033[0;33m(for admin only)\033[0;1m     |");
+            System.out.println("| 🚪  \033[0m3. \033[0;31mExit\033[0;1m                           |");
+            System.out.println("+---------------------------------------+\033[0m");
+            System.out.print("| 👉  Choose an option: ");
             int choice = scanner.nextInt();
-            System.out.println("---------------------------------------");
+
 
             switch (choice) {
                 case 1:

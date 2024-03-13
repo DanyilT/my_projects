@@ -8,7 +8,7 @@ import java.io.*;
 import java.util.*;
 
 public class InventoryManager {
-    private static final String INVENTORY_FILE_PATH = "Coffee Shop Inventory.csv";
+    private static final String INVENTORY_FILE_PATH = "csv/inventory.csv";
 
     // Reads the inventory from the CSV file and returns it as a Map of MenuItem objects
     public static Map<String, MenuItem> readInventory() {

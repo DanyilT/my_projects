@@ -8,7 +8,7 @@ import java.io.*;
 import java.util.*;
 
 public class TransactionManager {
-    private static final String TRANSACTION_FILE_PATH = "transactions.csv";
+    private static final String TRANSACTION_FILE_PATH = "csv/transactions.csv";
 
     // Method to append transactions to the transactions file
     public static void saveTransactions(List<Transaction> transactions) {

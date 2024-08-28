@@ -1,5 +1,4 @@
 # ignore
 .DS_Store
-.idea
-out
-/bf_interpreter
+.idea/
+out/
